@@ -27,10 +27,14 @@ public class Room : MonoBehaviour, IPointerClickHandler
 
     void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
     {
+       // Debug.Log("Å¬¸¯µÊ");
         if (RoomManager.Instance.isRoomEditing)
         {
-            Debug.Log("Å¬¸¯µÊ");
-            RoomManager.Instance.roomEditing = gameObject;
+          //  Debug.Log("ÆíÁýÁß!");
+            gameObject.GetComponent<Image>().enabled = false;
+            RoomManager.Instance.makeRoom(StoreManager.SelectRoom, transform);
+
+            RoomManager.Instance.isRoomEditing = false;
         }
     }
 }

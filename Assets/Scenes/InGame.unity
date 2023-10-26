@@ -133,8 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 18823806}
   - component: {fileID: 18823809}
-  - component: {fileID: 18823808}
-  - component: {fileID: 18823807}
+  - component: {fileID: 18823810}
+  - component: {fileID: 18823811}
   m_Layer: 5
   m_Name: room
   m_TagString: Untagged
@@ -162,24 +162,15 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &18823807
-MonoBehaviour:
+--- !u!222 &18823809
+CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18823805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56457d936ca04c645b36894415ebd630, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roomfloor: 0
-  roomNumber: 0
-  isUsing: 0
-  isRoomEditing: 0
-  roomType: 
---- !u!114 &18823808
+  m_CullTransparentMesh: 1
+--- !u!114 &18823810
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -209,14 +200,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &18823809
-CanvasRenderer:
+--- !u!114 &18823811
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18823805}
-  m_CullTransparentMesh: 1
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56457d936ca04c645b36894415ebd630, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomfloor: 0
+  roomNumber: 0
+  isUsing: 0
+  isRoomEditing: 0
+  roomType: 
 --- !u!1 &97075200
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,8 +264,8 @@ GameObject:
   m_Component:
   - component: {fileID: 101761493}
   - component: {fileID: 101761496}
-  - component: {fileID: 101761495}
-  - component: {fileID: 101761494}
+  - component: {fileID: 101761497}
+  - component: {fileID: 101761498}
   m_Layer: 5
   m_Name: room (1)
   m_TagString: Untagged
@@ -293,24 +293,15 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &101761494
-MonoBehaviour:
+--- !u!222 &101761496
+CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101761492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56457d936ca04c645b36894415ebd630, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roomfloor: 0
-  roomNumber: 0
-  isUsing: 0
-  isRoomEditing: 0
-  roomType: 
---- !u!114 &101761495
+  m_CullTransparentMesh: 1
+--- !u!114 &101761497
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -340,14 +331,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &101761496
-CanvasRenderer:
+--- !u!114 &101761498
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 101761492}
-  m_CullTransparentMesh: 1
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56457d936ca04c645b36894415ebd630, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomfloor: 0
+  roomNumber: 0
+  isUsing: 0
+  isRoomEditing: 0
+  roomType: 
 --- !u!1 &110563263
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,8 +1180,8 @@ GameObject:
   m_Component:
   - component: {fileID: 750751893}
   - component: {fileID: 750751896}
-  - component: {fileID: 750751895}
   - component: {fileID: 750751897}
+  - component: {fileID: 750751898}
   m_Layer: 5
   m_Name: room
   m_TagString: Untagged
@@ -1209,7 +1209,15 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &750751895
+--- !u!222 &750751896
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750751892}
+  m_CullTransparentMesh: 1
+--- !u!114 &750751897
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1239,15 +1247,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &750751896
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 750751892}
-  m_CullTransparentMesh: 1
---- !u!114 &750751897
+--- !u!114 &750751898
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2012,8 +2012,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1192137837}
   - component: {fileID: 1192137840}
-  - component: {fileID: 1192137839}
-  - component: {fileID: 1192137838}
+  - component: {fileID: 1192137841}
+  - component: {fileID: 1192137842}
   m_Layer: 5
   m_Name: room (3)
   m_TagString: Untagged
@@ -2041,24 +2041,15 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1192137838
-MonoBehaviour:
+--- !u!222 &1192137840
+CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1192137836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56457d936ca04c645b36894415ebd630, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roomfloor: 0
-  roomNumber: 0
-  isUsing: 0
-  isRoomEditing: 0
-  roomType: 
---- !u!114 &1192137839
+  m_CullTransparentMesh: 1
+--- !u!114 &1192137841
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2088,14 +2079,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &1192137840
-CanvasRenderer:
+--- !u!114 &1192137842
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1192137836}
-  m_CullTransparentMesh: 1
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56457d936ca04c645b36894415ebd630, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomfloor: 0
+  roomNumber: 0
+  isUsing: 0
+  isRoomEditing: 0
+  roomType: 
 --- !u!1 &1195500750
 GameObject:
   m_ObjectHideFlags: 0
@@ -2143,7 +2143,6 @@ MonoBehaviour:
   RestaurantPrefab: {fileID: 4131273059767019870, guid: 5f861f4d28d443d4c8d82384576bcbc7, type: 3}
   EmptyBackPrefab: {fileID: 0}
   isRoomEditing: 0
-  roomEditing: {fileID: 0}
 --- !u!4 &1195500753
 Transform:
   m_ObjectHideFlags: 0
@@ -2296,8 +2295,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1371529014}
   - component: {fileID: 1371529017}
-  - component: {fileID: 1371529016}
-  - component: {fileID: 1371529015}
+  - component: {fileID: 1371529018}
+  - component: {fileID: 1371529019}
   m_Layer: 5
   m_Name: room (3)
   m_TagString: Untagged
@@ -2325,24 +2324,15 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1371529015
-MonoBehaviour:
+--- !u!222 &1371529017
+CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371529013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56457d936ca04c645b36894415ebd630, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roomfloor: 0
-  roomNumber: 0
-  isUsing: 0
-  isRoomEditing: 0
-  roomType: 
---- !u!114 &1371529016
+  m_CullTransparentMesh: 1
+--- !u!114 &1371529018
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2372,14 +2362,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &1371529017
-CanvasRenderer:
+--- !u!114 &1371529019
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371529013}
-  m_CullTransparentMesh: 1
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56457d936ca04c645b36894415ebd630, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomfloor: 0
+  roomNumber: 0
+  isUsing: 0
+  isRoomEditing: 0
+  roomType: 
 --- !u!1 &1399707267
 GameObject:
   m_ObjectHideFlags: 0
@@ -2729,8 +2728,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1765327261}
   - component: {fileID: 1765327264}
-  - component: {fileID: 1765327263}
-  - component: {fileID: 1765327262}
+  - component: {fileID: 1765327265}
+  - component: {fileID: 1765327266}
   m_Layer: 5
   m_Name: room (1)
   m_TagString: Untagged
@@ -2758,24 +2757,15 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1765327262
-MonoBehaviour:
+--- !u!222 &1765327264
+CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1765327260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56457d936ca04c645b36894415ebd630, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roomfloor: 0
-  roomNumber: 0
-  isUsing: 0
-  isRoomEditing: 0
-  roomType: 
---- !u!114 &1765327263
+  m_CullTransparentMesh: 1
+--- !u!114 &1765327265
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2805,14 +2795,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &1765327264
-CanvasRenderer:
+--- !u!114 &1765327266
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1765327260}
-  m_CullTransparentMesh: 1
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56457d936ca04c645b36894415ebd630, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomfloor: 0
+  roomNumber: 0
+  isUsing: 0
+  isRoomEditing: 0
+  roomType: 
 --- !u!1 &1826896852
 GameObject:
   m_ObjectHideFlags: 0
@@ -3033,8 +3032,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2036553669}
   - component: {fileID: 2036553672}
-  - component: {fileID: 2036553671}
-  - component: {fileID: 2036553670}
+  - component: {fileID: 2036553673}
+  - component: {fileID: 2036553674}
   m_Layer: 5
   m_Name: room (2)
   m_TagString: Untagged
@@ -3062,24 +3061,15 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2036553670
-MonoBehaviour:
+--- !u!222 &2036553672
+CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036553668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56457d936ca04c645b36894415ebd630, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roomfloor: 0
-  roomNumber: 0
-  isUsing: 0
-  isRoomEditing: 0
-  roomType: 
---- !u!114 &2036553671
+  m_CullTransparentMesh: 1
+--- !u!114 &2036553673
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3109,14 +3099,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &2036553672
-CanvasRenderer:
+--- !u!114 &2036553674
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036553668}
-  m_CullTransparentMesh: 1
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56457d936ca04c645b36894415ebd630, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomfloor: 0
+  roomNumber: 0
+  isUsing: 0
+  isRoomEditing: 0
+  roomType: 
 --- !u!1 &2076029957
 GameObject:
   m_ObjectHideFlags: 0
@@ -3270,8 +3269,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2116341952}
   - component: {fileID: 2116341955}
-  - component: {fileID: 2116341954}
-  - component: {fileID: 2116341953}
+  - component: {fileID: 2116341956}
+  - component: {fileID: 2116341957}
   m_Layer: 5
   m_Name: room (2)
   m_TagString: Untagged
@@ -3299,24 +3298,15 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2116341953
-MonoBehaviour:
+--- !u!222 &2116341955
+CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2116341951}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56457d936ca04c645b36894415ebd630, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  roomfloor: 0
-  roomNumber: 0
-  isUsing: 0
-  isRoomEditing: 0
-  roomType: 
---- !u!114 &2116341954
+  m_CullTransparentMesh: 1
+--- !u!114 &2116341956
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3346,11 +3336,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &2116341955
-CanvasRenderer:
+--- !u!114 &2116341957
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2116341951}
-  m_CullTransparentMesh: 1
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56457d936ca04c645b36894415ebd630, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomfloor: 0
+  roomNumber: 0
+  isUsing: 0
+  isRoomEditing: 0
+  roomType: 

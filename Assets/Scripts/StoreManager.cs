@@ -8,7 +8,7 @@ public class StoreManager: MonoBehaviour
     public GameObject StorePanel;
     public Image RoomImage;
     public Text message;
-
+    public static string SelectRoom;
 
     public void Start()
     {
@@ -44,7 +44,8 @@ public class StoreManager: MonoBehaviour
         message.text = txt;
         ShowTextMessage();
         HideStorePanel();
-        RoomManager.Instance.makeRoom(roomType);
+        RoomManager.Instance.isRoomEditing = true;
+        SelectRoom = roomType;
     }
 
 }
