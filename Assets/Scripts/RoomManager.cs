@@ -29,7 +29,7 @@ public class RoomManager : MonoBehaviour
         switch (roomType) 
         {
             case "Guest Room":
-                Instantiate (GuestRoomPrefab, _transform);
+                Instantiate(GuestRoomPrefab, _transform);
                 break;
             case "Restaurant":
                 Instantiate(RestaurantPrefab, _transform);

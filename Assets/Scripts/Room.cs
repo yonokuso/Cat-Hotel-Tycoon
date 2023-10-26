@@ -34,6 +34,7 @@ public class Room : MonoBehaviour, IPointerClickHandler
             gameObject.GetComponent<Image>().enabled = false;
             RoomManager.Instance.makeRoom(StoreManager.SelectRoom, transform);
 
+            StoreManager._this.HideTextMessage();
             RoomManager.Instance.isRoomEditing = false;
         }
     }

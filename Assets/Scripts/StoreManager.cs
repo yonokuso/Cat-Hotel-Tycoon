@@ -9,10 +9,11 @@ public class StoreManager: MonoBehaviour
     public Image RoomImage;
     public Text message;
     public static string SelectRoom;
+    public static StoreManager _this;
 
     public void Start()
     {
-
+        if (_this == null) _this = this;
         HideStorePanel();
         HideTextMessage();
 
