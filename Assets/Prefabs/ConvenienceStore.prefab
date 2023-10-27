@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7787949212287427885}
   - component: {fileID: 7373214362723156085}
   m_Layer: 0
-  m_Name: GuestRoom
+  m_Name: ConvenienceStore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,7 +55,7 @@ MonoBehaviour:
   roomNumber: 0
   isUsing: 0
   isRoomEditing: 0
-  roomType: Guest Room
+  roomType: Convenience Store
 --- !u!222 &7787949212287427885
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -84,7 +84,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c84685f0a38c83e4eaad02aeaae8c9d2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a48f5c6b37a51424084618598f0ac18f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

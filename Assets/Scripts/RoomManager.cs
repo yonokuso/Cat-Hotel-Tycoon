@@ -8,6 +8,7 @@ public class RoomManager : MonoBehaviour
 {
     public GameObject GuestRoomPrefab;
     public GameObject RestaurantPrefab;
+    public GameObject StorePrefab;
     public GameObject EmptyBackPrefab;
 
     public static RoomManager Instance;
@@ -33,6 +34,9 @@ public class RoomManager : MonoBehaviour
                 break;
             case "Restaurant":
                 Instantiate(RestaurantPrefab, _transform);
+                break;
+            case "Convenience Store":
+                    Instantiate(StorePrefab, _transform);
                 break;
             default: break;
         }
