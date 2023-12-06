@@ -15,8 +15,7 @@ public class StoreManager: MonoBehaviour
     {
         if (_this == null) _this = this;
         HideStorePanel();
-        HideTextMessage();
-
+        HideGuideTextMessage();
     }
 
     public void ShowStorePanel()
@@ -29,23 +28,25 @@ public class StoreManager: MonoBehaviour
         StorePanel.SetActive(false); 
     }
 
-    public void ShowTextMessage()
+    public void ShowGuideTextMessage()
     {
         message.gameObject.SetActive(true);
     }
-    public void HideTextMessage()
+    public void HideGuideTextMessage()
     {
         message.gameObject.SetActive(false);
     }
-
+    public void SetGuideTextMessage(string txt)
+    {
+        message.text = txt;
+    }
 
     public void BuyFacility(string roomType)
     {
-        string txt= "설치할 곳을 클릭해주세요!";
-        message.text = txt;
-        ShowTextMessage();
+        SetGuideTextMessage("설치할 곳을 클릭해주세요!");
+        ShowGuideTextMessage();
         HideStorePanel();
-        RoomManager.Instance.isRoomEditing = true;
+        RoomManager._this.isRoomEditing = true;
         SelectRoom = roomType;
     }
 

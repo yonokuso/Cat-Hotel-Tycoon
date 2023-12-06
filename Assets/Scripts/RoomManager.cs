@@ -9,28 +9,30 @@ public class RoomManager : MonoBehaviour
     public GameObject GuestRoomPrefab;
     public GameObject RestaurantPrefab;
     public GameObject StorePrefab;
-    public GameObject EmptyBackPrefab;
 
-    public static RoomManager Instance;
+    public static RoomManager _this;
 
     public bool isRoomEditing;
+
+    public List<GameObject> GuestRooms;
 
     //상점에서 시설을 선택한 후, 객실을 클릭하면 시설이 설치가 됨. 
 
     public void Start()
     {
-        if (Instance == null) Instance = this;
+        if (_this == null) _this = this;
     }
 
 
     public void makeRoom(string roomType, Transform _transform)
     {
-        Instance.isRoomEditing = true;
+        _this.isRoomEditing = true;
         //타입에 맞는 시설 prefab 생성
         switch (roomType) 
         {
             case "Guest Room":
-                Instantiate(GuestRoomPrefab, _transform);
+                GameObject guestroom =  Instantiate(GuestRoomPrefab, _transform);
+                GuestRooms.Add(guestroom);
                 break;
             case "Restaurant":
                 Instantiate(RestaurantPrefab, _transform);
@@ -40,6 +42,11 @@ public class RoomManager : MonoBehaviour
                 break;
             default: break;
         }
+    }
+
+    public int numGuestRoom()
+    {
+        return GuestRooms.Count;
     }
 
 
