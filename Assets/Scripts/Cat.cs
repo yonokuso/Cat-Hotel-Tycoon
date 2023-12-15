@@ -18,7 +18,7 @@ public class Cat : MonoBehaviour
 
     public void Start()
     {
-        animator = gameObject.GetComponent<Animator>();
+        //animator = gameObject.GetComponent<Animator>();
         myState = CatState.EnterHotel;
         myAnimationState = AnimationState.Walk;
         rb = GetComponent<Rigidbody2D>();
@@ -106,22 +106,22 @@ public class Cat : MonoBehaviour
         var distanceY = Vector2.Distance(
             new Vector2(GuestManager._this.HotelEnterPosition.transform.position.x,gameObject.transform.position.y),
             new Vector2(GuestManager._this.HotelEnterPosition.transform.position.x,
-            GuestManager._this.HotelEnterPosition.transform.position.y + (-targetRoom.roomfloor + StartRoom.roomfloor) * 165f));
+            GuestManager._this.HotelEnterPosition.transform.position.y + ( + targetRoom.roomfloor - StartRoom.roomfloor) * 165f));
 
         var distanceX = Vector2.Distance(
             new Vector2(gameObject.transform.position.x, gameObject.transform.position.y),
             new Vector2(GuestManager._this.HotelEnterPosition.transform.position.x + ( targetRoom.roomNumber - StartRoom.roomNumber) * 100f, gameObject.transform.position.y));
 
         //같은 층에 있지 않다면...엘레베이터로 타고 이동하게끔
-        if (targetRoom.roomfloor != StartRoom.roomfloor &&  distanceY > 1.5f )
+        if (targetRoom.roomfloor != StartRoom.roomfloor &&  distanceY > 2f )
         {
-            MovePos(gameObject.transform.position, new Vector2(GuestManager._this.HotelEnterPosition.transform.position.x, gameObject.transform.position.y + ( - targetRoom.roomfloor + StartRoom.roomfloor) * 165));
+           // Debug.Log(distanceY);
+            MovePos(gameObject.transform.position, new Vector2(GuestManager._this.HotelEnterPosition.transform.position.x, gameObject.transform.position.y + ( + targetRoom.roomfloor-+ StartRoom.roomfloor) * 165));
         }
-        else if (distanceX > 1.5f)
+        else if (distanceX > 2f)
         {
-            Debug.Log(distanceX);
+           // Debug.Log(distanceX);
             MovePos(gameObject.transform.position, new Vector2(gameObject.transform.position.x + (targetRoom.roomNumber - StartRoom.roomNumber) * 100, gameObject.transform.position.y));
-      
         }
         
     }
