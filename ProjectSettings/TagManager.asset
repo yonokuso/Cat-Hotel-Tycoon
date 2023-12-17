@@ -6,6 +6,8 @@ TagManager:
   tags:
   - GuestRoom
   - EnterHotel
+  - Restaurant
+  - Store
   layers:
   - Default
   - TransparentFX
