@@ -4,20 +4,20 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Room : MonoBehaviour, IPointerClickHandler
+public class Room : MonoBehaviour
 {
     public int roomfloor;
     public int roomNumber;
     public bool isUsing = false;
     public bool isRoomEditing = false;
     public string roomType;
+    public GameObject CatGuest;
     protected GameObject room;
-    private Image imageComponent;
+    
 
 
     public void Start()
     {
-        imageComponent = GetComponent<Image>();
         room = gameObject;
         int index = transform.parent.GetSiblingIndex();
         roomfloor = index;
@@ -25,12 +25,4 @@ public class Room : MonoBehaviour, IPointerClickHandler
         roomNumber = index;
     }
 
-    void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
-    {
-        if (RoomManager.Instance.isRoomEditing)
-        {
-            Debug.Log("Å¬¸¯µÊ");
-            RoomManager.Instance.roomEditing = gameObject;
-        }
-    }
 }

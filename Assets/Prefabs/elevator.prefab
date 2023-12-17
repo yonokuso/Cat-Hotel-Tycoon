@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1626824652596374292}
   - component: {fileID: 4871626401597383239}
   m_Layer: 0
-  m_Name: Restaurant
+  m_Name: elevator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -1644440595, guid: 21a70d085fc8a5340a6b9c92e37ef663, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8178b76722bd8cb448a787ab3c4cb9a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
