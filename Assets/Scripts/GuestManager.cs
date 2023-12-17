@@ -11,7 +11,7 @@ public class GuestManager : MonoBehaviour
 
     public int GuestNum = 1;
     public int CurrentGuestNum = 0;
-    private float SpawnTime = 1.0f;
+    private float SpawnTime = 3f;
 
 
     void Start()
