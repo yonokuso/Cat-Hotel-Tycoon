@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
 
     public void MainBtn()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("InGame");
     }
 
     public void ShowPanel()

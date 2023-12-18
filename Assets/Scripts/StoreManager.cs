@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class StoreManager: MonoBehaviour
 {
-    public GameObject StorePanel;
-    public Image RoomImage;
+   // public GameObject StorePanel;
+  //  public Image RoomImage;
     public Text message;
     public static string SelectRoom;
     public static StoreManager _this;
@@ -14,20 +14,8 @@ public class StoreManager: MonoBehaviour
     public void Start()
     {
         if (_this == null) _this = this;
-        HideStorePanel();
         HideGuideTextMessage();
     }
-
-    public void ShowStorePanel()
-    {
-        StorePanel.SetActive(true);
-    }
-
-    public void HideStorePanel()
-    { 
-        StorePanel.SetActive(false); 
-    }
-
     public void ShowGuideTextMessage()
     {
         message.gameObject.SetActive(true);
@@ -45,7 +33,6 @@ public class StoreManager: MonoBehaviour
     {
         SetGuideTextMessage("설치할 곳을 클릭해주세요!");
         ShowGuideTextMessage();
-        HideStorePanel();
         RoomManager._this.isRoomEditing = true;
         SelectRoom = roomType;
     }

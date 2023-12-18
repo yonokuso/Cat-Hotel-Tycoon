@@ -19,11 +19,11 @@ public class CoinManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CoinText = GameObject.Find("Canvas").transform.Find("재화").transform.Find("CatCoin").transform.Find("Text").gameObject.GetComponent<Text>();
-        CryText = GameObject.Find("Canvas").transform.Find("재화").transform.Find("Crystal").transform.Find("Text").gameObject.GetComponent<Text>();
+        CoinText = GameObject.Find("UICanvas").transform.Find("재화").transform.Find("CatCoin").transform.Find("Text").gameObject.GetComponent<Text>();
+        CryText = GameObject.Find("UICanvas").transform.Find("재화").transform.Find("Crystal").transform.Find("Text").gameObject.GetComponent<Text>();
 
-        Message = GameObject.Find("Canvas").transform.Find("재화").transform.Find("Message").gameObject; // Canvas-Message
-        MSG = GameObject.Find("Canvas").transform.Find("재화").transform.Find("Message").transform.Find("Text").gameObject.GetComponent<Text>();
+        Message = GameObject.Find("UICanvas").transform.Find("재화").transform.Find("Message").gameObject; // Canvas-Message
+        MSG = GameObject.Find("UICanvas").transform.Find("재화").transform.Find("Message").transform.Find("Text").gameObject.GetComponent<Text>();
 
 
         CoinInt = PlayerPrefs.GetInt("CatCoin", 0); // PlayerPrefs 내에 저장되어있는 'Coin'을 불러와 CoinInt에 저장합니다. 만약에 저장된 정보가 없다면 0을 저장합니다.
@@ -38,7 +38,7 @@ public class CoinManager : MonoBehaviour
         PlayerPrefs.SetInt("CatCoin", CoinInt); // CoinInt를 PlayerPrefs 내에 저장되어있는 'CatCoin'에 저장합니다.
         PlayerPrefs.SetInt("Crystal", CryInt);
 
-        CoinText.text = CoinInt.ToString(); //CoinText의 Text에 CoinInt를 출력합니다.
+        CoinText.text = CoinInt.ToString(); //CoinText의 Text에 CoinInt를 출력합니다.   
         CryText.text = CryInt.ToString();
 
         if (TimeSet == true) // TimeSet이 True면
