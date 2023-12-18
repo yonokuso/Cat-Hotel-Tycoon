@@ -41,10 +41,10 @@ public class CoinManager : MonoBehaviour
         CoinText.text = CoinInt.ToString(); //CoinText의 Text에 CoinInt를 출력합니다.
         CryText.text = CryInt.ToString();
 
-        if (TimeSet == true) // TimeSet이 True면
+        if (TimeSet == true)
         {
-            Timer += Time.deltaTime; // 타이머가 작동합니다.
-            if (Timer > 2.0f) // 2초가 지나면
+            Timer += Time.deltaTime; // 타이머 작동
+            if (Timer > 2.0f) // 2초 지나면
             {
                 Message.SetActive(false);
                 MSG.text = null;
@@ -73,5 +73,15 @@ public class CoinManager : MonoBehaviour
             MSG.text = "코인이 부족합니다.".ToString(); // MSG의 Text를 "돈이 부족합니다."로 출력합니다.
             TimeSet = true; // TimeSet를 true로 합니다.
         }
+    }
+
+
+    [SerializeField]
+    private string coin_Sound2;
+
+    public void Coin2()
+    {
+        SoundManager.instance.PlaySE(coin_Sound2);
+
     }
 }
