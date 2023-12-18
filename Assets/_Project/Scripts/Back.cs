@@ -9,8 +9,7 @@ public class Back : MonoBehaviour
         if (RoomManager._this.isRoomEditing)
         {
             RoomManager._this.makeRoom(StoreManager.SelectRoom, transform.parent);
-
-            StoreManager._this.HideGuideTextMessage();
+            GuideManager.instance.HideGuideBox();
             RoomManager._this.isRoomEditing = false;
         }
     }

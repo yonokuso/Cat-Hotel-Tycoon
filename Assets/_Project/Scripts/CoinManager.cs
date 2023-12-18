@@ -22,14 +22,8 @@ public class CoinManager : MonoBehaviour
         CoinText = GameObject.Find("UICanvas").transform.Find("재화").transform.Find("CatCoin").transform.Find("Text").gameObject.GetComponent<Text>();
         CryText = GameObject.Find("UICanvas").transform.Find("재화").transform.Find("Crystal").transform.Find("Text").gameObject.GetComponent<Text>();
 
-        Message = GameObject.Find("UICanvas").transform.Find("재화").transform.Find("Message").gameObject; // Canvas-Message
-        MSG = GameObject.Find("UICanvas").transform.Find("재화").transform.Find("Message").transform.Find("Text").gameObject.GetComponent<Text>();
-
-
         CoinInt = PlayerPrefs.GetInt("CatCoin", 0); // PlayerPrefs 내에 저장되어있는 'Coin'을 불러와 CoinInt에 저장합니다. 만약에 저장된 정보가 없다면 0을 저장합니다.
         CryInt = PlayerPrefs.GetInt("Crystal", 0);
-
-        Message.SetActive(false);
     }
 
     // Update is called once per frame
@@ -46,7 +40,6 @@ public class CoinManager : MonoBehaviour
             Timer += Time.deltaTime; // 타이머가 작동합니다.
             if (Timer > 2.0f) // 2초가 지나면
             {
-                Message.SetActive(false);
                 MSG.text = null;
                 Timer = 0;
                 TimeSet = false;
@@ -69,8 +62,9 @@ public class CoinManager : MonoBehaviour
         }
         else
         {
-            Message.SetActive(true); // 메시지 오브젝트를 활성화합니다. 
-            MSG.text = "코인이 부족합니다.".ToString(); // MSG의 Text를 "돈이 부족합니다."로 출력합니다.
+            GuideManager.instance.SetGuideMessage("코인이 부족합니다");
+            GuideManager.instance.OpenGuideBox();
+            
             TimeSet = true; // TimeSet를 true로 합니다.
         }
     }

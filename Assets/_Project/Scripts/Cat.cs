@@ -66,7 +66,7 @@ public class Cat : MonoBehaviour
                 new Vector2 (GuestManager._this.HotelEnterPosition.transform.position.x + myRoom.roomNumber * 100f, 
                 GuestManager._this.HotelEnterPosition.transform.position.y + myRoom.roomfloor * 165f));
 
-            Debug.Log(distance);
+            //Debug.Log(distance);
             if (distance <= 2.5f)
             {
                 myState = CatState.UsingRoom;
@@ -161,12 +161,12 @@ public class Cat : MonoBehaviour
     {
         if (RoomManager._this.numGuestRoom() <= 0)
         {
-            StoreManager._this.SetGuideTextMessage("손님이 머물 방이 없어요! 상점에서 게스트룸을 구매해주세요.");
-            StoreManager._this.ShowGuideTextMessage();
+            GuideManager.instance.SetGuideMessage("손님이 머물 방이 없어요! 상점에서 게스트룸을 구매해주세요.");
+            GuideManager.instance.OpenGuideBox();
         }
         else
         {
-            StoreManager._this.HideGuideTextMessage();
+            GuideManager.instance.HideGuideBox();
             foreach (var room in RoomManager._this.GuestRooms)
             {
               if ( room.GetComponentInParent<Room>().CatGuest == null)
