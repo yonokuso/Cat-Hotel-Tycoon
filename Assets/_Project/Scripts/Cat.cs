@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Cat : MonoBehaviour
 {
-    public float likeability;
+    public int likeability;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
     public CatState myState;
@@ -24,6 +24,7 @@ public class Cat : MonoBehaviour
     bool isArrive = false;
     bool isUsingRestaurant = false;
     bool movingToRestaurant = false;
+    bool isPay = false;
 
     float elapsedTime = 0f;
     float waitTime = 5f;
@@ -32,6 +33,7 @@ public class Cat : MonoBehaviour
 
     public void Start()
     {
+        likeability = 0;
         moveSpeed = 70f;
         animator = gameObject.GetComponent<Animator>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
@@ -112,6 +114,7 @@ public class Cat : MonoBehaviour
                 if (isUsingRestaurant == false)
                 {
                     gameObject.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y + 50);
+                    likeability += Random.Range(5, 10);
                     isUsingRestaurant = true;
                     catTxt.text = "맛있어!!";
                     movingToRestaurant = false;
@@ -161,7 +164,7 @@ public class Cat : MonoBehaviour
     {
         if (RoomManager._this.numGuestRoom() <= 0)
         {
-            GuideManager.instance.SetGuideMessage("손님이 머물 방이 없어요! 상점에서 게스트룸을 구매해주세요.");
+            GuideManager.instance.SetGuideMessage("손님이 머물 방이 없어요! \n 상점에서 게스트룸을 구매해주세요.");
             GuideManager.instance.OpenGuideBox();
         }
         else
@@ -212,10 +215,20 @@ public class Cat : MonoBehaviour
         else if(myState == CatState.LeaveHotel)
         {
             animator.SetBool("Eat", false);
+            
             if(UsedRoom != null)
             {
                 UsedRoom.isUsing = false;
             }
+
+            if (!isPay)
+            {
+              // SoundManager.instance.PlaySE("coin");
+                
+                CoinManager.instance.GetMoney((likeability) + Random.Range(5, 10));
+                isPay = !isPay;
+            }
+
 
             catTxt.text = "즐거웠어!";
 
@@ -332,7 +345,7 @@ public class Cat : MonoBehaviour
                 var distanceX = Vector2.Distance(
     new Vector2(gameObject.transform.position.x, 0),
     new Vector2(GuestManager._this.HotelEnterPosition.transform.position.x + (targetRoom.roomNumber) * 100f, 0));
-                Debug.Log(distanceX);
+                //Debug.Log(distanceX);
 
                 if (distanceX > 2.5f)
                 {

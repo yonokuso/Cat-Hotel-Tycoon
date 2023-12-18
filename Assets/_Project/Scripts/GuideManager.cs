@@ -9,6 +9,7 @@ public class GuideManager : MonoBehaviour
 
     public GameObject MessageBox;
     public Text GuideMessage;
+    public Button GuideBtn;
     public static GuideManager instance;
 
     private void Start()

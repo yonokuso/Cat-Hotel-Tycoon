@@ -15,11 +15,23 @@ public class StoreManager: MonoBehaviour
     }
     public void BuyFacility(string roomType)
     {
-        StoreCanvas.SetActive(false);
-        GuideManager.instance.SetGuideMessage("설치할 곳을 클릭해주세요");
-        GuideManager.instance.OpenGuideBox();
-        RoomManager._this.isRoomEditing = true;
-        SelectRoom = roomType;
+        if(CoinManager.instance.CanBuy(100))
+        {
+            CoinManager.instance.lostMoney(100);
+            StoreCanvas.SetActive(false);
+            GuideManager.instance.SetGuideMessage("설치할 곳을 클릭해주세요");
+            GuideManager.instance.OpenGuideBox();
+            RoomManager._this.isRoomEditing = true;
+            SelectRoom = roomType;
+        }
+        else
+        {
+            StoreCanvas.SetActive(false);
+
+            GuideManager.instance.SetGuideMessage("코인이 부족해요");
+            GuideManager.instance.OpenGuideBox();
+        }
+        
     }
 
 }
