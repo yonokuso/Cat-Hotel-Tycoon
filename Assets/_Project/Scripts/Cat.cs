@@ -12,7 +12,9 @@ public class Cat : MonoBehaviour
     public AnimationState myAnimationState;
     public float moveSpeed = 50f;
     public Text catTxt;
-    
+    public GameObject Coin;
+
+
     private Rigidbody2D rb;
     private Room myRoom;
     private Room EnterHotel;
@@ -223,8 +225,8 @@ public class Cat : MonoBehaviour
 
             if (!isPay)
             {
-              // SoundManager.instance.PlaySE("coin");
-                
+                // SoundManager.instance.PlaySE("coin");
+                Coin.SetActive(true);
                 CoinManager.instance.GetMoney((likeability) + Random.Range(5, 10));
                 isPay = !isPay;
             }

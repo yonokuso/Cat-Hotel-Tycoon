@@ -15,6 +15,7 @@ public class CoinMove : MonoBehaviour
         {
             Debug.Log("¹Ù´Ú °¨Áö");
             coin.transform.DOJump(coin.transform.position, 20f, 7, 2f);
+
             // DOJump(Vector3 to, float jumpPower, int numJumps, float duration, bool snapping(true))
         }
 
